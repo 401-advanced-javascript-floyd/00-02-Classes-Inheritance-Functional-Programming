@@ -13,6 +13,14 @@ List.prototype.push = function(item) {
   this.length++;
 };
 
+List.prototype.shift = function() {
+  let returnValue = this.data[1];
+  delete this.data[0];
+  this.length--;
+  return returnValue;
+};
+
+
 /**
  * // Remove an item from the end of the list and return it's value
  * @returns {*}
@@ -23,5 +31,4 @@ List.prototype.pop = function() {
   this.length--;
   return returnValue;
 };
-
 module.exports = List;

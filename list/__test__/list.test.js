@@ -12,12 +12,24 @@ describe('List Data Structure', () => {
     expect(stuff.data).toEqual({});
   });
 
-  it('pushes items to the end of the data set', () => {
+  it('pops item off end of array', () => {
     let stuff = new List();
     stuff.push('a');
     stuff.push('b');
     expect(stuff.length).toEqual(2);
-    expect(stuff.data[1]).toEqual('b');
+    stuff.pop();
+    expect(stuff.length).toEqual(1); 
+    expect(stuff.pop()).toBe('b');
   });
 
+  // it('shifts items off beginning of data set', () => {
+  //   let stuff = new List();
+  //   stuff.push('a');
+  //   stuff.push('b');
+  //   expect(stuff.length).toEqual(2);
+  //   stuff.shift();
+  //   expect(stuff.length).toEqual(1);
+  // });
+
 });
+                                                                   

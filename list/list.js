@@ -16,7 +16,6 @@ class List {
     this.data[this.length] = item;
     this.length++;
   }
-
   /**
    * // Remove an item from the end of the list and return it's value
    * @returns {*}
